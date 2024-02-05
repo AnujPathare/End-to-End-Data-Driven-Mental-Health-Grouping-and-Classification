@@ -1,0 +1,12 @@
+pandas
+numpy
+seaborn
+plotly
+dill
+imbalanced-learn
+kneed
+scikit-learn
+fuzzy-c-means
+xgboost
+Flask
+# -e .
