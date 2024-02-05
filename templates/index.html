@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Prevalence Group</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .login {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 450px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="login">   
+        <form action="{{ url_for('predict')}}" method="post">
+            <h1>Mental Health Prevalence Group</h1>
+            
+            <div class="form-group">
+                <label for="Schizophrenia">Schizophrenia:</label>
+                <input type="text" id="Schizophrenia" name="Schizophrenia" placeholder="Schizophrenia" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="Depressive">Depressive:</label>
+                <input type="text" id="Depressive" name="Depressive" placeholder="Depressive" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="Anxiety">Anxiety:</label>
+                <input type="text" id="Anxiety" name="Anxiety" placeholder="Anxiety" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Bipolar">Bipolar:</label>
+                <input type="text" id="Bipolar" name="Bipolar" placeholder="Bipolar" required>
+            </div>
+        
+            <div class="form-group">  
+                <label for="Eating">Eating:</label>
+                <input type="text" id="Eating" name="Eating" placeholder="Eating" required>
+            </div>
+            
+            <div class="mb-3">
+                <input class="btn btn-primary" type="submit" value="Mental Health Prevalence Group">
+            </div>
+        </form>
+        <h2>Mental Health Prevalence Group: {{results}}</h2>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <html>
+<body>
+    <div class="login">   
+        <form action="{{ url_for('predict')}}" method="post">
+            <h1>
+                <legend>Mental Health Prevalence Group</legend>
+            </h1>
+            
+        <div class="form-group">
+            <label for="Schizophrenia">Schizophrenia:</label>
+            <input type="text" id="Schizophrenia" name="Schizophrenia" placeholder="Schizophrenia">
+        </div>
+    
+        <div class="form-group">
+            <label for="Depressive">Depressive:</label>
+            <input type="text" id="Depressive" name="Depressive" placeholder="Depressive">
+        </div>
+    
+        <div class="form-group">
+            <label for="Anxiety">Anxiety:</label>
+            <input type="text" id="Anxiety" name="Anxiety" placeholder="Anxiety">
+        </div>
+
+        <div class="form-group">
+            <label for="Bipolar">Bipolar:</label>
+            <input type="text" id="Bipolar" name="Bipolar" placeholder="Bipolar">
+        </div>
+    
+        <div class="form-group">  
+            <label for="Eating">Eating:</label>
+            <input type="text" id="Eating" name="Eating" placeholder="Eating">
+        </div>
+        
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Mental Health Prevalence Group" required />
+        </div>
+        </form>
+    <h2>
+        Mental Health Prevalence Group: {{results}}
+    </h2>
+</body>
+</html> -->
